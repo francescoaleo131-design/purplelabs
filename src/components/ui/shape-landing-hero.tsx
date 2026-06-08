@@ -1,8 +1,11 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Circle } from "lucide-react";
+import { Circle, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+// IMPORT FORZATO: Sincronizzato sul nome file esatto (HoverButton)
+import { HoverButton } from "@/components/ui/HoverButton"; 
 
 function ElegantShape({
     className,
@@ -79,7 +82,6 @@ export function HeroGeometric({
     title1?: string;
     title2?: string;
 }) {
-    // MODIFICATO: Aggiunta la tipizzazione esplicita 'Variants' importata da framer-motion
     const fadeUpVariants: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: (i: number) => ({
@@ -183,9 +185,25 @@ export function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto px-4">
+                        <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto px-4">
                             Plasmiamo le tue idee in ecosistemi web futuristici attraverso l'uso di design raffinato e tecnologie di frontiera.
                         </p>
+                    </motion.div>
+
+                    <motion.div
+                        custom={3}
+                        variants={fadeUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="flex justify-center"
+                    >
+                        <Link href="/contatti" passHref legacyBehavior>
+                            {/* Classi di allineamento e impaginazione integrate qui */}
+                            <HoverButton className="inline-flex items-center justify-center gap-3 group whitespace-nowrap">
+                                <span>Prenota una consulenza</span>
+                                <ArrowUpRight className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-purple-300" />
+                            </HoverButton>
+                        </Link>
                     </motion.div>
                 </div>
             </div>
