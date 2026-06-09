@@ -18,7 +18,7 @@ export default function Header() {
       <div className="container mx-auto px-6 flex items-center justify-between w-full">
         <div className="flex items-center">
           <Link href="/" className="flex items-center group">
-            <div className="relative w-16 h-16 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-40 h-40 transition-transform duration-300 group-hover:scale-105">
               <Image src="/icon.webp" alt="PurpleLabs Logo" fill className="object-contain" priority />
             </div>
           </Link>
