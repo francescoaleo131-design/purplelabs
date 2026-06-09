@@ -31,7 +31,7 @@ function ElegantShape({
                 ease: [0.23, 0.86, 0.39, 0.96],
                 opacity: { duration: 1.2 },
             }}
-            className={cn("absolute hidden sm:block", className)} // Nascondiamo le forme giganti su mobile per non rompere lo scroll
+            className={cn("absolute hidden sm:block", className)}
         >
             <motion.div
                 animate={{ y: [0, 15, 0] }}
@@ -82,11 +82,10 @@ export function HeroGeometric({
     };
 
     return (
-        // Aggiunto pt-24 su mobile e pt-32 su PC per distanziare i testi dall'header fisso
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 pb-12">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.02] via-transparent to-fuchsia-500/[0.02] blur-3xl" />
 
-            {/* Sfondi Geometrici (Adattati per non strabordare) */}
+            {/* Sfondi Geometrici */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <ElegantShape
                     delay={0.3}
@@ -109,7 +108,7 @@ export function HeroGeometric({
             <div className="relative z-10 container mx-auto px-6 max-w-5xl">
                 <div className="w-full text-center flex flex-col items-center">
                     
-                    {/* BADGE: Ingrandito e distanziato correttamente */}
+                    {/* BADGE */}
                     <motion.div
                         custom={0}
                         variants={fadeUpVariants}
@@ -123,7 +122,7 @@ export function HeroGeometric({
                         </span>
                     </motion.div>
 
-                    {/* TITOLO PRINCIPALE: Font scalato perfettamente per non andare a capo male su smartphone */}
+                    {/* TITOLO PRINCIPALE */}
                     <motion.div
                         custom={1}
                         variants={fadeUpVariants}
@@ -153,18 +152,20 @@ export function HeroGeometric({
                         </p>
                     </motion.div>
 
-                    {/* BOTTONE: Forzato il flex in linea per evitare che la freccia vada sotto */}
+                    {/* BOTTONE COMPATTO SU MISURA */}
                     <motion.div
                         custom={3}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="w-full flex justify-center"
+                        className="w-full flex justify-center px-6"
                     >
                         <Link href="/contatti" passHref legacyBehavior>
-                            <HoverButton className="inline-flex items-center justify-center gap-2 px-8 py-4 whitespace-nowrap text-base font-bold text-white">
-                                <span>Prenota una consulenza</span>
-                                <ArrowUpRight className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-purple-300" />
+                            <HoverButton className="flex flex-row items-center justify-center gap-2 px-6 py-3.5 w-auto max-w-max mx-auto group">
+                                <span className="flex items-center justify-center gap-2 whitespace-nowrap text-sm sm:text-base font-bold text-white">
+                                    <span>Prenota una consulenza</span>
+                                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-purple-300" />
+                                </span>
                             </HoverButton>
                         </Link>
                     </motion.div>
