@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 import { Circle, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-// IMPORT FORZATO: Sincronizzato sul nome file esatto (HoverButton)
 import { HoverButton } from "@/components/ui/HoverButton"; 
 
 function ElegantShape({
@@ -147,17 +146,18 @@ export function HeroGeometric({
             </div>
 
             <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
                     
+                    {/* BADGE MODIFICATO: Spostato più giù nel flusso di lettura e ingrandito (text-base md:text-lg) */}
                     <motion.div
                         custom={0}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/30 border border-purple-500/20 mb-8 md:mb-12"
+                        className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-purple-950/30 border border-purple-500/20 mb-6 md:mb-8 backdrop-blur-sm"
                     >
-                        <Circle className="h-2 w-2 fill-purple-400 animate-pulse" />
-                        <span className="text-sm text-purple-300 tracking-wide font-medium">
+                        <Circle className="h-2.5 w-2.5 fill-purple-400 animate-pulse" />
+                        <span className="text-base md:text-lg text-purple-300 tracking-wide font-semibold">
                             {badge}
                         </span>
                     </motion.div>
@@ -186,7 +186,7 @@ export function HeroGeometric({
                         animate="visible"
                     >
                         <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl mx-auto px-4">
-                            Plasmiamo le tue idee in ecosistemi web futuristici attraverso l'uso di design raffinato e tecnologie di frontiera.
+                            Plasmiamo le tue idee in ecosistemi web futuristici attraverso l'uso di design raffinato e technologies di frontiera.
                         </p>
                     </motion.div>
 
@@ -198,7 +198,6 @@ export function HeroGeometric({
                         className="flex justify-center"
                     >
                         <Link href="/contatti" passHref legacyBehavior>
-                            {/* Classi di allineamento e impaginazione integrate qui */}
                             <HoverButton className="inline-flex items-center justify-center gap-3 group whitespace-nowrap">
                                 <span>Prenota una consulenza</span>
                                 <ArrowUpRight className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-purple-300" />
