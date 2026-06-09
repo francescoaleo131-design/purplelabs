@@ -83,25 +83,54 @@ export function HeroGeometric({
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black pt-24 md:pt-32 pb-12">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.02] via-transparent to-fuchsia-500/[0.02] blur-3xl" />
+            {/* Gradiente di sfondo soffuso e profondo */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.03] via-transparent to-fuchsia-500/[0.03] blur-3xl" />
 
-            {/* Sfondi Geometrici */}
+            {/* SFONDI GEOMETRICI COMPLETI E ANIMATI */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <ElegantShape
                     delay={0.3}
-                    width={500}
-                    height={120}
+                    width={600}
+                    height={140}
                     rotate={12}
-                    gradient="from-purple-500/[0.1]"
-                    className="left-[-5%] top-[20%]"
+                    gradient="from-purple-500/[0.12]"
+                    className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
                 />
+
                 <ElegantShape
                     delay={0.5}
-                    width={400}
-                    height={100}
+                    width={500}
+                    height={120}
                     rotate={-15}
-                    gradient="from-fuchsia-500/[0.1]"
-                    className="right-[-5%] top-[60%]"
+                    gradient="from-fuchsia-500/[0.12]"
+                    className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
+                />
+
+                <ElegantShape
+                    delay={0.4}
+                    width={300}
+                    height={80}
+                    rotate={-8}
+                    gradient="from-violet-500/[0.12]"
+                    className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
+                />
+
+                <ElegantShape
+                    delay={0.6}
+                    width={200}
+                    height={60}
+                    rotate={20}
+                    gradient="from-purple-600/[0.12]"
+                    className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
+                />
+
+                <ElegantShape
+                    delay={0.7}
+                    width={150}
+                    height={40}
+                    rotate={-25}
+                    gradient="from-violet-400/[0.12]"
+                    className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
                 />
             </div>
 
@@ -152,7 +181,7 @@ export function HeroGeometric({
                         </p>
                     </motion.div>
 
-                    {/* BOTTONE COMPATTO SU MISURA */}
+                    {/* BOTTONE COMPATTO E ANIMATO */}
                     <motion.div
                         custom={3}
                         variants={fadeUpVariants}
@@ -173,6 +202,7 @@ export function HeroGeometric({
                 </div>
             </div>
 
+            {/* Sfumatura di chiusura inferiore */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 pointer-events-none" />
         </div>
     );
