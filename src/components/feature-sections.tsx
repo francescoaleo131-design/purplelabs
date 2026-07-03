@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import {ServiceMarquee} from "@/components/ServiceMarquee";
 
 export default function ServicesFeatures() {
   const featuresList = [
@@ -72,7 +73,7 @@ export default function ServicesFeatures() {
             </div>
           ))}
         </div>
-
+          <ServiceMarquee />
       </div>
     </section>
   );

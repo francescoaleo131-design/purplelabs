@@ -59,12 +59,12 @@ export function BackgroundPaths() {
 
             <div className="relative z-10 text-center space-y-4 max-w-md mx-auto p-4">
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                    PurpleLabs
+                    CELESTYAL
                 </h1>
                 <p className="text-lg text-slate-400">
                     Stiamo arrivando, controlla le novità su{" "}
                     <a
-                        href="https://instagram.com/purplelabs"
+                        href="https://instagram.com/celestyal.it"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-purple-400 hover:text-purple-300 underline"
